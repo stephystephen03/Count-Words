@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class CountWords {
 
     public static void main(String[] args) throws IOException{
-        String filename="src/main/resources/input_words.txt";
+        String filename= "src/main/resources/input_words.txt";
 
         int count = countWordsStartingWithM(filename);
         List<String> longWords = getWordsLongerThanFiveChars(filename);
@@ -18,7 +18,7 @@ public class CountWords {
         System.out.println("Words longer than 5 characters: " + longWords);
     }
 
-    private static List<String> getWordsLongerThanFiveChars(String filename) throws IOException{
+    public static List<String> getWordsLongerThanFiveChars(String filename) throws IOException{
         List<String> words = readWordsFromFile(filename);
 
         return words.stream().
@@ -27,7 +27,7 @@ public class CountWords {
 
     }
 
-    private static int countWordsStartingWithM(String filename) throws IOException{
+    public static int countWordsStartingWithM(String filename) throws IOException{
         List<String> words = readWordsFromFile(filename);
         List<String> wordsStartingWithM = words.stream()
                 .filter(word -> word.startsWith("M") || word.startsWith("m"))
