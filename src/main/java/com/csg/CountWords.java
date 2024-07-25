@@ -13,11 +13,19 @@ public class CountWords {
         String filename="src/main/resources/input_words.txt";
 
         int count = countWordsStartingWithM(filename);
+        List<String> longWords = getWordsLongerThanFiveChars(filename);
         System.out.println("No.of words staring with 'M' or 'm' : " +count);
-
+        System.out.println("Words longer than 5 characters: " + longWords);
     }
 
+    private static List<String> getWordsLongerThanFiveChars(String filename) throws IOException{
+        List<String> words = readWordsFromFile(filename);
 
+        return words.stream().
+                filter(word -> word.length() > 5)
+                .collect(Collectors.toList());
+
+    }
 
     private static int countWordsStartingWithM(String filename) throws IOException{
         List<String> words = readWordsFromFile(filename);
