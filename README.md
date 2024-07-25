@@ -1,23 +1,23 @@
-#Count Words
+# Count Words
 
 This project processes following business rules:
 
 - Counts and returns the number of words that starts with 'M' and 'm'.
 - Returns all the words longer than 5 characters.
 
-##Prerequisites
+## Prerequisites
 
 - Java 16
 - Maven
 
-##Build the Project
+## Build the Project
 ```sh
 mvn clean install
 ```
 
-##Application Result
+## Application Result
 
-###Example
+### Example
 Given the input file `input_words.txt`
 
 ```sh
@@ -27,7 +27,7 @@ Mango
 Mountains
 ```
 
-###Output
+### Output
 ```sh
 Words staring with 'M' or 'm': 
 Marry
